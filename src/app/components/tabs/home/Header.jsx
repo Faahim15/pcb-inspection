@@ -19,7 +19,7 @@ export default function Header() {
           >
             <Ionicons name="hardware-chip-outline" size={28} color="#fff" />
           </View>
-          <Text className="font-poppinsBold text-base text-black ">
+          <Text className="font-poppins-bold text-base text-black ">
             Pcb inspector
           </Text>
         </View>

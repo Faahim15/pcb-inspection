@@ -4,7 +4,7 @@ import Recentangle from "./Rectangle";
 export default function () {
   return (
     <View>
-      <Text className="font-poppinsBold  my-[3%] text-base text-gray-900">
+      <Text className="font-poppins-bold  my-[3%] text-base text-black">
         Quick Actions
       </Text>
       <View className="flex-row justify-center items-center flex-wrap gap-x-[4%] gap-y-[4%] ">

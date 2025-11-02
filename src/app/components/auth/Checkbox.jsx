@@ -16,12 +16,12 @@ export default function Checkbox({ text }) {
             className=" bg-white"
           />
         </Pressable>
-        <Text className="ml-[2.13%] font-poppinsMedium text-sm text-[#475467]">
+        <Text className="ml-[2.13%] font-poppins-500medium text-sm text-[#475467]">
           {text}
         </Text>
       </View>
       <Pressable onPress={() => router.push("/auth/forgetPassword")}>
-        <Text className="font-poppinsSemiBold text-sm text-purple-600 ">
+        <Text className="font-poppins-semiBold text-sm text-purple-600 ">
           Forget Password?
         </Text>
       </Pressable>

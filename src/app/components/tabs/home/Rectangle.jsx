@@ -31,10 +31,12 @@ const Recentangle = ({ rectangleConfig }) => {
       </TouchableOpacity>
 
       {/* Recent Results text */}
-      <Text className=" font-poppins text-sm text-gray-800 ">{title}</Text>
+      <Text className=" font-poppins-400regular text-sm text-gray-800 ">
+        {title}
+      </Text>
 
       {/* Subtitle text */}
-      <Text className="font-poppins text-xs py-[1%] text-gray-600 ">
+      <Text className="font-poppins-400regular text-xs py-[1%] text-gray-600 ">
         {subtitle}
       </Text>
     </View>

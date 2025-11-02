@@ -84,7 +84,7 @@ export default function ProfilePictureUpload() {
   return (
     <View className=" mt-[2.36%]">
       <View className="flex-row">
-        <Text className="font-poppins text-base text-[#060605]">
+        <Text className="font-poppins-500medium text-base text-[#060605]">
           Profile Picture
         </Text>
       </View>
@@ -105,7 +105,7 @@ export default function ProfilePictureUpload() {
         className="border mt-[1.8%] justify-center bg-white  border-gray-200  rounded-md px-[8%] py-[3%] flex-row items-center"
       >
         <Ionicons name="image-outline" size={20} color="#9CA3AF" />
-        <Text className="font-poppins text-base text-gray-600 ml-[2%]">
+        <Text className="font-poppins-400regular text-base text-[#898989] ml-[2%]">
           Choose Your File
         </Text>
       </TouchableOpacity>

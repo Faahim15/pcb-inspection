@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { scale } from "../../util/Adaptiveness";
 
 export default function AuthButton({ onPress, title, agreeToTerms = false }) {
   const [loading, setLoading] = useState(false);
@@ -28,14 +29,14 @@ export default function AuthButton({ onPress, title, agreeToTerms = false }) {
         agreeToTerms ? "bg-purple-600" : "bg-purple-500 opacity-50"
       }`}
     >
-      <Text className="text-white font-poppinsMedium text-base mr-[2%]">
+      <Text className="text-white font-poppins-500medium text-base mr-[2%]">
         {title}
       </Text>
 
       {loading ? (
         <ActivityIndicator size="small" color="#ffffff" />
       ) : (
-        <Ionicons name="arrow-forward" size={20} color="white" />
+        <Ionicons name="arrow-forward" size={scale(20)} color="white" />
       )}
     </TouchableOpacity>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { scale } from "../../util/Adaptiveness";
 
 export default function Button({ onPress, title }) {
   const [loading, setLoading] = useState(false);
@@ -25,14 +26,14 @@ export default function Button({ onPress, title }) {
         loading ? "opacity-70" : ""
       }`}
     >
-      <Text className="text-white font-poppinsMedium text-base mr-[2%]">
+      <Text className="text-white font-poppins-500medium text-base mr-[2%]">
         {title}
       </Text>
 
       {loading ? (
         <ActivityIndicator size="small" color="#ffffff" />
       ) : (
-        <Ionicons name="arrow-forward" size={20} color="white" />
+        <Ionicons name="arrow-forward" size={scale(20)} color="white" />
       )}
     </TouchableOpacity>
   );

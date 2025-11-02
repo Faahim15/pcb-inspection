@@ -25,7 +25,11 @@ export default function RootLayout() {
     <Provider store={store}>
       <SafeAreaView style={{ flex: 1 }}>
         {/* Optional: Status Bar */}
-        <StatusBar backgroundColor="#000" barStyle="light-content" />
+        <StatusBar
+          translucent
+          backgroundColor="transparent"
+          barStyle="light-content"
+        />
 
         <Stack screenOptions={{ headerShown: false }}>
           {/* <Stack.Screen name="index" options={{ title: "Home" }} />

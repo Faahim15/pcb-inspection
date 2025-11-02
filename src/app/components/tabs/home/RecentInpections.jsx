@@ -1,11 +1,13 @@
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import inspectionData from "../../data/InspectionData";
+
 const RecentInspections = () => {
-  const renderInspectionItem = ({ item }) => (
+  const renderInspectionItem = (item) => (
     <TouchableOpacity
+      key={item.id}
       style={{ borderColor: item.status === "Failed" ? "#fecaca" : "#bbf7d0" }}
-      className="bg-white  rounded-xl mb-[3%] p-[2%] shadow-sm border-2 "
+      className="bg-white rounded-xl mb-[3%] p-[2%] shadow-sm border-2"
     >
       <View className="flex-row items-center justify-between">
         {/* Left side with icon and details */}
@@ -17,10 +19,10 @@ const RecentInspections = () => {
 
           {/* Inspection details */}
           <View className="flex-1">
-            <Text className="text-gray-900 font-poppinsSemiBold text-base mb-1">
+            <Text className="text-gray-900 font-poppins-semiBold text-base mb-1">
               {item.code}
             </Text>
-            <Text className="text-gray-500 font-poppins text-xs">
+            <Text className="text-gray-500 font-poppins-400regular text-xs">
               {item.defects} • {item.time}
             </Text>
           </View>
@@ -33,7 +35,7 @@ const RecentInspections = () => {
             className={`${item.statusColor} px-[3%] py-[1.5%] rounded-lg mr-[3%]`}
           >
             <Text
-              className={`${item.statusTextColor} text-xs font-poppinsMedium `}
+              className={`${item.statusTextColor} text-xs font-poppins-500medium`}
             >
               {item.status}
             </Text>
@@ -49,25 +51,18 @@ const RecentInspections = () => {
   return (
     <View className="flex-1">
       {/* Header */}
-      <View className="flex-row justify-between items-center">
-        <Text className="text-gray-900 font-poppinsBold text-base">
+      <View className="flex-row justify-between items-center mb-[2%]">
+        <Text className="text-black font-poppins-bold text-base">
           Recent Inspections
         </Text>
         <TouchableOpacity>
-          <Text className="text-blue-600 font-poppinsMedium text-base">
+          <Text className="text-blue-600 font-poppins-500medium text-base">
             View All
           </Text>
         </TouchableOpacity>
       </View>
 
-      {/* Inspection List */}
-      <FlatList
-        data={inspectionData.slice(0, 4)}
-        renderItem={renderInspectionItem}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={{ paddingTop: 16, paddingBottom: 20 }}
-        showsVerticalScrollIndicator={false}
-      />
+      {inspectionData.slice(0, 4).map(renderInspectionItem)}
     </View>
   );
 };

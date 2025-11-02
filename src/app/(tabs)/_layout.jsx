@@ -1,21 +1,36 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { StatusBar } from "react-native";
+import {
+  StatusBar,
+  Platform,
+  Dimensions,
+  useColorScheme,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { scale, verticalScale } from "../util/Adaptiveness";
 
+const { height: screenHeight } = Dimensions.get("window");
+
 export default function TabsLayout() {
+  const colorScheme = useColorScheme();
+  const isDarkMode = colorScheme === "dark";
+
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
         backgroundColor: "#fff",
-        paddingBottom: 0, // 👈 explicitly remove extra padding
+        minHeight: Platform.OS === "android" ? screenHeight : screenHeight - 20,
+        paddingBottom: 0,
       }}
-      edges={["top"]}
     >
       {/* StatusBar setup */}
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle={isDarkMode ? "light-content" : "dark-content"}
+      />
 
       <Tabs
         screenOptions={{
@@ -26,7 +41,7 @@ export default function TabsLayout() {
             borderTopWidth: 0,
             borderTopLeftRadius: scale(10),
             borderTopRightRadius: scale(10),
-            // height: verticalScale(90),
+            height: verticalScale(80),
           },
           tabBarItemStyle: {
             flex: 1,
@@ -38,7 +53,7 @@ export default function TabsLayout() {
             fontSize: scale(12),
             textAlign: "center",
             marginTop: verticalScale(2),
-            fontFamily: "Poppins_400Regular",
+            fontFamily: "poppins-400regular",
           },
         }}
       >
@@ -69,7 +84,6 @@ export default function TabsLayout() {
             ),
           }}
         />
-
         <Tabs.Screen
           name="profile"
           options={{
@@ -80,6 +94,6 @@ export default function TabsLayout() {
           }}
         />
       </Tabs>
-    </SafeAreaView>
+    </View>
   );
 }

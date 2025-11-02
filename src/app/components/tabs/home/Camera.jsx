@@ -31,10 +31,10 @@ export default function Camera() {
             <Ionicons name="camera" size={24} color="white" />
           </View>
           <View className="flex-col gap-y-[3%]">
-            <Text className="text-white font-poppinsMedium text-base">
+            <Text className="text-white font-poppins-500medium text-base">
               Start Inspection
             </Text>
-            <Text className="font-poppins text-xs text-gray-100">
+            <Text className="font-poppins-400regular text-xs text-gray-100">
               Capture PCB for analysis
             </Text>
           </View>

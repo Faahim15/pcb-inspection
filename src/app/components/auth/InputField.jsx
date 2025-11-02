@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 function InputField({ inputConfig }) {
   return (
     <View className="">
-      <Text className="text-gray-900  text-base font-poppinsMedium mb-[2%]">
+      <Text className="text-gray-900  text-base font-poppins-500medium mb-[2%]">
         {inputConfig.label}
       </Text>
       <View className="relative">
@@ -15,7 +15,8 @@ function InputField({ inputConfig }) {
           placeholder={inputConfig.placeholder}
           keyboardType={inputConfig.keyboardType}
           autoCapitalize={inputConfig.autoCapitalize}
-          className="w-full h-[56px] bg-white border border-gray-200  rounded-lg pl-[14%] pr-[4%] text-gray-900"
+          placeholderTextColor="#898989"
+          className="w-full h-[56px] font-poppins-400regular bg-white border border-gray-200  rounded-lg pl-[14%] pr-[4%] text-gray-900"
         />
       </View>
     </View>

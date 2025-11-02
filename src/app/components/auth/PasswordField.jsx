@@ -5,7 +5,7 @@ export default function PasswordField({ label = "Password" }) {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <View>
-      <Text className="text-gray-900 text-base font-poppinsMedium mb-[2%]">
+      <Text className="text-gray-900 text-base font-poppins-500medium mb-[2%]">
         {label}
       </Text>
       <View className="relative">
@@ -15,7 +15,8 @@ export default function PasswordField({ label = "Password" }) {
         <TextInput
           placeholder="••••••••"
           secureTextEntry={!showPassword}
-          className="w-full h-[56px] bg-white border border-gray-200 rounded-lg pl-[14%] pr-[14%] text-gray-900"
+          placeholderTextColor="#898989"
+          className="w-full h-[56px] bg-white border font-poppins-400regular border-gray-200 rounded-lg pl-[14%] pr-[14%] text-gray-900"
         />
         <TouchableOpacity
           onPress={() => setShowPassword(!showPassword)}

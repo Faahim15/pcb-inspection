@@ -1,7 +1,6 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import AuthHeader from "../components/auth/AuthHeader";
 import InputField from "../components/auth/InputField";
-import AuthButton from "../components/auth/AuthButton";
 import { useRouter } from "expo-router";
 import Button from "../components/auth/Button";
 

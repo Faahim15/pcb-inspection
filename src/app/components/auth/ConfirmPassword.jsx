@@ -5,7 +5,7 @@ export default function ConfirmPassword({ label = "Confirm Password" }) {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   return (
     <View className="">
-      <Text className="text-gray-900 text-base font-poppinsMedium mb-[2%]">
+      <Text className="text-gray-900 text-base font-poppins-500medium mb-[2%]">
         {label}
       </Text>
       <View className="relative">
@@ -15,7 +15,8 @@ export default function ConfirmPassword({ label = "Confirm Password" }) {
         <TextInput
           placeholder="••••••••"
           secureTextEntry={!showConfirmPassword}
-          className="w-full h-[56px] bg-white border border-gray-200 rounded-lg pl-[14%] pr-[14%] text-gray-900"
+          placeholderTextColor="#898989"
+          className="w-full h-[56px] font-poppins-400regular bg-white border border-gray-200 rounded-lg pl-[14%] pr-[14%] text-gray-900"
         />
         <TouchableOpacity
           onPress={() => setShowConfirmPassword(!showConfirmPassword)}

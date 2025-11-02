@@ -98,16 +98,6 @@ export default function CameraScreen() {
           <View className="absolute bottom-[-2px] right-[-2px] w-[15%] h-[8%] border-b-4 border-r-4 border-cyan-400" />
         </View>
 
-        {/* Bottom Instruction */}
-        {/* <View className="absolute bottom-[22%] left-0 right-0 items-center">
-          <Text className="text-white text-sm bg-black/50 px-[4%] py-[2%] rounded">
-            Tap to capture. Hold for burst mode.
-          </Text>
-          <Text className="text-white/70 text-xs mt-[1%] bg-black/50 px-[3%] py-[1%] rounded">
-            Pinch to zoom. Swipe for settings or analysis.
-          </Text>
-        </View> */}
-
         {/* Bottom Controls */}
         <View className="absolute bottom-[6%] left-0 right-0 px-[8%]">
           <View className="flex-row items-center justify-between">

@@ -24,16 +24,15 @@ export default function CreateAccountScreen() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       className="flex-1 bg-gray-50"
     >
-      <StatusBar barStyle="dark-content" backgroundColor="#f9fafb" />
       {/* Header */}
       <View className="items-center mt-[2%] mb-[8%]">
         <View className="w-[60px] h-[60px] bg-purple-600 rounded-2xl items-center justify-center mb-[4%]">
           <Ionicons name="rocket" size={28} color="white" />
         </View>
-        <Text className="text-2xl font-poppinsBold text-gray-900 mb-[2%]">
+        <Text className="text-2xl font-poppins-bold text-gray-900 mb-[2%]">
           Create Account
         </Text>
-        <Text className="text-gray-600 font-poppins text-sm text-center">
+        <Text className="text-gray-600 font-poppins-400regular text-sm text-center">
           Join thousands of users and start your journey
         </Text>
       </View>
@@ -85,16 +84,21 @@ export default function CreateAccountScreen() {
               >
                 <Ionicons
                   name={agreeToTerms ? "checkbox" : "square-outline"}
-                  size={16}
+                  size={18}
                   color="#9333ea"
                   className=" bg-white"
                 />
               </Pressable>
               {/* <Checkbox text="" /> */}
-              <Text className="text-gray-600 flex-1 leading-5">
+              <Text className="font-poppins-400regular text-sm text-gray-600 flex-1 leading-5">
                 I agree to the{" "}
-                <Text className="text-purple-600">Terms of Service</Text> and{" "}
-                <Text className="text-purple-600">Privacy Policy</Text>
+                <Text className="font-poppins-400regular text-xs text-purple-600">
+                  Terms of Service
+                </Text>{" "}
+                and{" "}
+                <Text className="font-poppins-400regular text-xs text-purple-600">
+                  Privacy Policy
+                </Text>
               </Text>
             </View>
 
@@ -107,7 +111,7 @@ export default function CreateAccountScreen() {
 
             {/* Divider */}
             <View className="items-center ">
-              <Text className="text-gray-500 font-poppins ">
+              <Text className="text-gray-500 font-poppins-400regular text-sm ">
                 Or continue with
               </Text>
             </View>
@@ -123,12 +127,12 @@ export default function CreateAccountScreen() {
             </View>
 
             {/* Sign In Link */}
-            <View className="flex-row justify-center mb-[4%]">
-              <Text className="text-gray-600 font-poppins ">
+            <View className="flex-row items-center justify-center mb-[2%]">
+              <Text className="text-gray-600 font-poppins-400regular text-sm ">
                 Already have an account?{" "}
               </Text>
               <Pressable onPress={() => router.push("/auth/signIn")}>
-                <Text className="text-purple-600  font-poppinsMedium ">
+                <Text className="text-purple-600 text-sm font-poppins-500medium">
                   Sign in
                 </Text>
               </Pressable>

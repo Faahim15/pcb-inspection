@@ -18,10 +18,10 @@ export default function AuthHeader({
         </Pressable>
       </View>
       <View className="px-[15%] mt-[2.5%]">
-        <Text className="font-poppinsMedium text-white text-center text-2xl">
+        <Text className="font-poppins-500medium text-white text-center text-2xl">
           {title}
         </Text>
-        <Text className="font-poppins text-white mt-[1.2%] text-center text-sm">
+        <Text className="font-poppins-400regular text-white mt-[1.2%] text-center text-sm">
           {subtitle}
         </Text>
       </View>
