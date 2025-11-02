@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "smart-pcb-inspection",
+    "slug": "smart-pcb-inspection",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "smartpcbinspection",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to inspect PCBs."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.fahim15.smartpcbinspection"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": ["expo-router", "expo-font", "expo-camera"],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "81bd466c-f72d-49ef-b7da-c56eadbf90c0"
+      }
+    },
+    "owner": "fahim15"
+  }
+}
