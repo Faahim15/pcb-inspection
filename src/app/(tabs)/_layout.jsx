@@ -66,6 +66,15 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
+          name="dataset"
+          options={{
+            title: "Dataset",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="server-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
           name="history"
           options={{
             title: "History",
@@ -80,15 +89,6 @@ export default function TabsLayout() {
             title: "Analytics",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="bar-chart-outline" size={size} color={color} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="dataset"
-          options={{
-            title: "Dataset",
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="server-outline" size={size} color={color} />
             ),
           }}
         />
