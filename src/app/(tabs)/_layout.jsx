@@ -7,7 +7,6 @@ import {
   useColorScheme,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { scale, verticalScale } from "../util/Adaptiveness";
 
 const { height: screenHeight } = Dimensions.get("window");
@@ -41,7 +40,7 @@ export default function TabsLayout() {
             borderTopWidth: 0,
             borderTopLeftRadius: scale(10),
             borderTopRightRadius: scale(10),
-            height: verticalScale(80),
+            height: verticalScale(120),
           },
           tabBarItemStyle: {
             flex: 1,
@@ -81,6 +80,15 @@ export default function TabsLayout() {
             title: "Analytics",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="bar-chart-outline" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="dataset"
+          options={{
+            title: "Dataset",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="server-outline" size={size} color={color} />
             ),
           }}
         />
