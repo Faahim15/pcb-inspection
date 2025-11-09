@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as DocumentPicker from "expo-document-picker";
 import * as ImagePicker from "expo-image-picker";
 
-export default function TrainingDataUpload() {
+export default function TestingDataUplaod() {
   const [trainingImages, setTrainingImages] = useState({
     count: 0,
     files: [],
@@ -129,7 +129,7 @@ export default function TrainingDataUpload() {
       <View className="bg-white rounded-2xl p-[5%] shadow-sm">
         {/* Header */}
         <Text className="text-lg font-semibold text-gray-800 mb-[5%]">
-          2. Training Data
+          3. Testing Data
         </Text>
 
         {/* Content Container */}

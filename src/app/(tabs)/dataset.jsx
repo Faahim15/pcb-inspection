@@ -3,6 +3,7 @@ import React from "react";
 import DatasetUpload from "../components/tabs/dataset/RawImageUpload";
 import TrainingDataUpload from "../components/tabs/dataset/TrainingDataUpload";
 import { verticalScale } from "../util/Adaptiveness";
+import TestingDataUplaod from "../components/tabs/dataset/TestingData";
 
 export default function Dataset() {
   return (
@@ -13,7 +14,7 @@ export default function Dataset() {
       >
         <DatasetUpload />
         <TrainingDataUpload />
-        <TrainingDataUpload />
+        <TestingDataUplaod />
       </ScrollView>
     </View>
   );
