@@ -78,6 +78,16 @@ export default function TabsLayout() {
           name="history"
           options={{
             title: "History",
+            headerShown: true,
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: "rgb(59, 7, 100)",
+            },
+            headerTintColor: "#fff",
+            headerTitleStyle: {
+              fontFamily: "poppins-400regular",
+              fontSize: scale(18),
+            },
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="refresh-outline" size={size} color={color} />
             ),

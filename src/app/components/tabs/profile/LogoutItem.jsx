@@ -1,0 +1,40 @@
+import { View, TouchableOpacity, Text } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+
+import { SvgXml } from "react-native-svg";
+import { logout } from "../../../../../assets/svg/profile";
+import { scale, verticalScale } from "../../../util/Adaptiveness";
+import XStyle from "../../../util/color";
+export default function LogoutItem({ onPress }) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      className="border mb-[3%] flex-row justify-between rounded-md border-[#D4E0EB]"
+      style={[
+        XStyle.shadowBox,
+        {
+          flexDirection: "row",
+          alignItems: "center",
+          //   paddingVertical: scale(16),
+          height: verticalScale(60),
+        },
+      ]}
+    >
+      <View className="flex-row items-center justify-center ">
+        <SvgXml xml={logout} height={verticalScale(30)} width={scale(34)} />
+        <Text
+          style={{ color: "#EF4444", marginLeft: scale(12) }}
+          className="font-poppins-500medium text-sm  "
+        >
+          Logout
+        </Text>
+      </View>
+      <View
+        style={{ width: scale(44), height: verticalScale(44) }}
+        className=" bg-purple-600 rounded-md  items-center justify-center"
+      >
+        <Ionicons name="chevron-forward" size={24} color="#fff" />
+      </View>
+    </TouchableOpacity>
+  );
+}
